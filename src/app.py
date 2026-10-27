@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# 讓 Python 能正確找到同層的模組
+sys.path.append(str(Path(__file__).parent))
+
 import streamlit as st
 import pandas as pd
 from git_analyzer.analyzer import analyze_repo
